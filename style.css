@@ -1,3 +1,49 @@
 * {
     box-sizing: border-box;
 }
+
+.gridContainer {
+    width: 30em;
+    height: 30em;
+}
+
+.gridContainer__inner {
+    width: 48%;
+    height: 48%;
+    float: left;
+    margin: 0.5%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gridContainer__inner:hover .gridContainer__inner__cover,
+.gridContainer__inner:hover .gridContainer__inner__letter {
+    transform: translateY(-100%);
+}
+
+.gridContainer__inner__cover {
+    background: #000;
+    color: #fff;
+}
+
+.gridContainer__inner__letter {
+    background: red;
+    color: #000;
+}
+.gridContainer__inner__cover,
+.gridContainer__inner__letter {
+    transition: transform 0.4s ease-in;
+    width: 100%;
+    height: 100%;
+    font-size: 7em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
